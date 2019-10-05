@@ -1,0 +1,24 @@
+<> NRF24L01+ Pins
+(Ground is marked with square lines)
+
+IRQ     MISO
+MOSI    SCK
+SCN     CE
+VCC     [GND]
+
+
+<> Interface with NANO
+____________________________
+NRF24L01    ->  Arduino NANO
+____________________________
+VCC         ->      3V3
+GND         ->      GND
+CE          ->      D9
+SCN         ->      D10
+SCK         ->      D13
+MOSI        ->      D11
+MISO        ->      D12
+____________________________
+
+<> Use 10μF (or 100) capacitor between 3v3 and GND
+<> Cell works if used between 5V and GND of NANO
