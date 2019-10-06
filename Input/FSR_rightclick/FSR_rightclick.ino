@@ -4,7 +4,7 @@ Then connect one end of a 10K resistor from Analog 0 to ground
 Connect LED from pin 11 through a resistor to ground 
 */
  
-#define fsrAnalogPin2  2 // FSR is connected to analog 1
+#define fsrAnalogPin2  2 // FSR is connected to analog 2
 #define threshold 100
 //#define LEDpin  5      // connect Red LED to pin 5 (debug purpose)
 int fsrReading2;      // the analog reading from the FSR resistor divider
