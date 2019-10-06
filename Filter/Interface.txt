@@ -1,0 +1,21 @@
+<> MPU6050 Pins
+(Ground is marked with square lines)
+
+SCL     SDA
+XDA     XCL
+VCC     [GND]
+    AD0
+
+
+<> Interface with NANO
+____________________________
+MPU6050    ->  Arduino NANO
+____________________________
+VCC         ->      5V
+GND         ->      GND
+SCL         ->      A5
+SDA         ->      A4
+____________________________
+
+<> Use 2K registor between 5V and SDA and 5V and SCL.
+<> Cell works if used between 5V and GND of NANO

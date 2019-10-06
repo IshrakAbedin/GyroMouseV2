@@ -1,0 +1,16 @@
+<> FSR Pins
+(Ground is marked with square lines)
+
+Two pins suppose P1 and P2 (arbitary names given for clarity)
+
+
+<> Interface with NANO
+____________________________
+FSR    ->  Arduino NANO
+____________________________
+P1          ->      5V
+P2          ->      A2
+____________________________
+
+<> Use 10K Registor between P2 and GND
+<> Cell works if used between 5V and GND of NANO
