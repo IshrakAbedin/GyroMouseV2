@@ -68,14 +68,11 @@ void runSmoothingAverageFilter()
     xbuffer[counter] = PLoad.x;
     ybuffer[counter] = PLoad.y;
     counter = (counter + 1) % FILTER_RESOLUTION;
-    if (counter == 0)
-    {
-        Serial.print("G ");
-        Serial.print(getBoundedAvgX());
-        Serial.print(' ');
-        Serial.print(getBoundedAvgY());
-        Serial.println();
-    }
+    Serial.print("G ");
+    Serial.print(getBoundedAvgX());
+    Serial.print(' ');
+    Serial.print(getBoundedAvgY());
+    Serial.println();
 }
 
 float getBoundedAvgX()
