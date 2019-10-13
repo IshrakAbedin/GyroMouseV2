@@ -1,0 +1,52 @@
+﻿<Window x:Class="GyroMouse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GyroMouse"
+        mc:Ignorable="d"
+        Title="GyroMouseV2" Height="400" Width="600" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resource/GyroMouseBackground.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="169*"/>
+            <RowDefinition Height="16*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="Button_Connect" Content="CONNECT" HorizontalAlignment="Right" Margin="0,0,200.6,264.4" VerticalAlignment="Bottom" Width="134" Click="Button_Connect_Click" Height="47" FontFamily="Franklin Gothic Heavy" FontWeight="Bold" FontSize="20" Background="#7F00A8FF" Foreground="White" BorderBrush="White" ToolTip="Click to connect"/>
+        <Button x:Name="Button_Disconnect" Content="DISCONNECT" HorizontalAlignment="Left" Margin="251,80,0,0" VerticalAlignment="Top" Width="134" Click="Button_Disconnect_Click" Height="47" FontFamily="Franklin Gothic Heavy" FontWeight="Bold" FontSize="20" RenderTransformOrigin="2.021,1.271" Foreground="White" Background="#7EFF3700" BorderBrush="White" ToolTip="Click to disconnect"/>
+        <CheckBox x:Name="CheckBox_YInverted" Content="Invert Y-Axis" HorizontalAlignment="Left" Margin="426,64,0,0" VerticalAlignment="Top" Checked="CheckBox_YInverted_Checked" Unchecked="CheckBox_YInverted_Unchecked" Height="18" Width="134" FontFamily="Franklin Gothic Heavy" FontWeight="Bold" FontSize="18" Background="{x:Null}" BorderBrush="#FF8ECFE5" Foreground="#FFFFC000" ToolTip="Invert vertical movement"/>
+        <Button x:Name="Button_Refresh" Content="REFRESH" HorizontalAlignment="Right" Margin="0,0,405.6,0.4" VerticalAlignment="Bottom" Width="168" Click="Button_Refresh_Click" Height="39" FontFamily="Franklin Gothic Heavy" FontWeight="Bold" FontSize="18" Foreground="White" Background="#9CFF9A00" BorderBrush="White" ToolTip="Refresh port list"/>
+        <ListBox x:Name="ListBox_Ports" HorizontalAlignment="Left" Height="222" VerticalAlignment="Top" Width="170" FontFamily="Franklin Gothic Heavy" FontSize="24" Margin="10,62,0,0" BorderBrush="{x:Null}" Foreground="#FFFFC400" Background="#CC323232" FontStyle="Italic"/>
+        <Label Content="Ports" HorizontalAlignment="Right" Margin="0,10,436.6,0" VerticalAlignment="Top" Height="47" Width="105" FontFamily="Franklin Gothic Heavy" FontSize="36" Foreground="#FFFF9A00" BorderBrush="#FFB6DCF6" ToolTip="COM port list"/>
+        <ScrollViewer Margin="5,6.6,4.6,5.4" Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="Black" BorderBrush="Black">
+            <TextBlock x:Name="TextBlock_Log" TextWrapping="Wrap" Text="" Margin="1,1,1,1" FontStyle="Italic">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF515151" Offset="0"/>
+                        <GradientStop Color="#FF262626" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+        </ScrollViewer>
+        <CheckBox x:Name="CheckBox_Safety" Content="Safety" HorizontalAlignment="Left" Margin="426,87,0,0" VerticalAlignment="Top" Checked="CheckBox_Safety_Checked" Unchecked="CheckBox_Safety_Unchecked" Height="23" Width="78" FontFamily="Franklin Gothic Heavy" FontSize="18" Background="{x:Null}" BorderBrush="#FF8ECFE5" Foreground="#FFFFC000" ToolTip="Turn on and take mouse pointer to top left corner to disconnect"/>
+        <Rectangle x:Name="Rectangle_Status" Fill="#7F8B0000" HorizontalAlignment="Left" Height="10" Margin="259,0,0,0.4" VerticalAlignment="Bottom" Width="308" RenderTransformOrigin="14.292,5.45" ToolTip="Blue: Connected | Gray: Disconnected">
+            <Rectangle.Stroke>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF00544B" Offset="1"/>
+                    <GradientStop Color="#FFA0D4EF"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Button x:Name="Button_Help" Content="!" HorizontalAlignment="Left" Margin="312,211,0,0" VerticalAlignment="Top" Width="48" Click="Button_Help_Click" Height="43" FontFamily="Franklin Gothic Heavy" FontWeight="Bold" FontSize="36" RenderTransformOrigin="2.021,1.271" Foreground="White" Background="#7FFF9A00" BorderBrush="White" ToolTip="Help"/>
+        <Button x:Name="Button_About" Content="?" HorizontalAlignment="Left" Margin="259,211,0,0" VerticalAlignment="Top" Width="48" Click="Button_About_Click" Height="43" FontFamily="Franklin Gothic Heavy" FontWeight="Bold" FontSize="36" RenderTransformOrigin="2.021,1.271" Foreground="White" Background="#7FFF9A00" BorderBrush="White" ToolTip="About"/>
+        <CheckBox x:Name="CheckBox_ClickMode" Content="Click Mode" HorizontalAlignment="Left" Margin="426,41,0,0" VerticalAlignment="Top" Checked="CheckBox_ClickMode_Checked" Unchecked="CheckBox_ClickMode_Unchecked" Height="18" Width="118" FontFamily="Franklin Gothic Heavy" FontWeight="Bold" FontSize="18" Background="{x:Null}" BorderBrush="#FF8ECFE5" Foreground="#FFFFC000" ToolTip="Invert vertical movement"/>
+        <Rectangle Fill="#7FFF9A00" HorizontalAlignment="Left" Height="69" Margin="423,39,0,0" VerticalAlignment="Top" Width="135" Panel.ZIndex="-10" Stroke="#FFFFC000">
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+    </Grid>
+</Window>
