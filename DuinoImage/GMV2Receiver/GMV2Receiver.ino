@@ -2,7 +2,7 @@
 #include "nRF24L01.h"
 #include "RF24.h"
 
-#define FILTER_RESOLUTION 5
+#define FILTER_RESOLUTION 65
 #define X_ANGLE_MAX_DEGREE 25
 #define Y_ANGLE_MAX_DEGREE 18
 
