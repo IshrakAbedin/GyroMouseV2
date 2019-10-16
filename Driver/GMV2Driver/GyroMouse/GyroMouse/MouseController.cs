@@ -105,7 +105,8 @@ namespace GyroMouse
             }
             else if (str[0] == 'L')
             {
-                int LMB = Convert.ToInt32(str[2]);
+                GetV = str.Split(' ');
+                int LMB = Convert.ToInt32(GetV[1]);
                 if(LMB == 1)
                 {
                     VirtualMouse.LeftDown();
@@ -117,7 +118,8 @@ namespace GyroMouse
             }
             else if (str[0] == 'R')
             {
-                int RMB = Convert.ToInt32(str[2]);
+                GetV = str.Split(' ');
+                int RMB = Convert.ToInt32(GetV[1]);
                 if (RMB == 1)
                 {
                     VirtualMouse.RightDown();
